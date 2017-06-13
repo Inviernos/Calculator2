@@ -1,0 +1,52 @@
+// $Id: assignment4.mpc 378 2010-02-07 22:09:38Z hillj $
+
+project (assignment4) {
+  exename = assignment4
+  install = .
+ 
+  Source_Files {
+    Driver.cpp
+    Addition_Node.cpp
+    Binary_Expr_Node.cpp
+    Division_Node.cpp
+    Eval_Expr_Tree.cpp
+    Expr_Builder.cpp
+    Expr_Node.cpp
+    Expr_Node_Visitor.cpp
+    Expr_Tree.cpp
+    Expr_Tree_Builder.cpp
+    Multiply_Node.cpp
+    Mod_Node.cpp
+    Number_Node.cpp
+    Subtraction_Node.cpp
+    Unary_Expr_Node.cpp
+  }
+  
+  Header_Files{
+    Addition_Node.h
+    Binary_Expr_Node.h 
+    Division_Node.h
+    Eval_Expr_Tree.h
+    Expr_Builder.h
+    Expr_Node.h
+    Expr_Node_Visitor.h
+    Expr_Tree.h
+    Expr_Tree_Builder.h
+    Multiply_Node.h
+    Number_Node.h  
+    Subtract_Node.h
+    Mod_Node.h
+    Unary_Expr_Node.h
+  }
+
+  Template_Files {
+    Array_Base.cpp
+    Array.cpp
+    Stack.cpp
+  }
+
+  specific (make){
+    compile_flags += -std=c++0x
+
+  }
+}
