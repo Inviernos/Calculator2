@@ -119,6 +119,8 @@ void Expr_Tree_Builder::check(Binary_Expr_Node* node)
             temp1->setLeftChild(list1.pop());
             list1.push(temp1);
             popStack = false;
+            list2.push(node);
+            checkpredence = true;
          }
     }
 }
